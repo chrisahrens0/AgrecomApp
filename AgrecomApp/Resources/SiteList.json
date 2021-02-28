@@ -1,0 +1,42 @@
+[
+    {
+        "siteName": "Agrecom Offices",
+        "id": 10001,
+        "category": "unfiled",
+        "addressLine1": "411 West Ave",
+        "addressLine2": "Merced, CA 95341",
+        "description": "Agrecom's Merced address and offices"
+    },
+    {
+        "siteName": "Sample Site 1",
+        "id": 20001,
+        "category": "unfiled",
+        "addressLine1": "2400 N Lake Road",
+        "addressLine2": "Merced, CA 95343",
+        "description": "Sample Site 1 for testing purposes, remove before final release"
+    },
+    {
+        "siteName": "Sample Site 2",
+        "id": 20002,
+        "category": "unfiled",
+        "addressLine1": "2401 N Lake Road",
+        "addressLine2": "Merced, CA 95343",
+        "description": "Sample Site 2 for testing purposes, remove before final release"
+    },
+    {
+        "siteName": "Sample Site 3",
+        "id": 20003,
+        "category": "unfiled",
+        "addressLine1": "2402 N Lake Road",
+        "addressLine2": "Merced, CA 95343",
+        "description": "Sample Site 3 for testing purposes, remove before final release"
+    },
+    {
+        "siteName": "Sample Site 4",
+        "id": 20004,
+        "category": "unfiled",
+        "addressLine1": "2403 N Lake Road",
+        "addressLine2": "Merced, CA 95343",
+        "description": "Sample Site 4 for testing purposes, remove before final release"
+    }
+]

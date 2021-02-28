@@ -13,6 +13,12 @@
 		48FAC74425DBB0AF001072E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FAC74325DBB0AF001072E8 /* Preview Assets.xcassets */; };
 		48FAC74F25DBB0AF001072E8 /* AgrecomAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC74E25DBB0AF001072E8 /* AgrecomAppTests.swift */; };
 		48FAC75A25DBB0AF001072E8 /* AgrecomAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC75925DBB0AF001072E8 /* AgrecomAppUITests.swift */; };
+		48FAC76D25DBB184001072E8 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC76C25DBB184001072E8 /* Site.swift */; };
+		48FAC77B25DBB1C2001072E8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC77A25DBB1C2001072E8 /* ModelData.swift */; };
+		48FAC78125DBB20C001072E8 /* SiteList.json in Resources */ = {isa = PBXBuildFile; fileRef = 48FAC78025DBB20C001072E8 /* SiteList.json */; };
+		48FAC78F25DBB2A1001072E8 /* SiteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC78E25DBB2A1001072E8 /* SiteList.swift */; };
+		48FAC79425DBB91A001072E8 /* SiteListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC79325DBB91A001072E8 /* SiteListPage.swift */; };
+		48FAC79925DBC615001072E8 /* SiteDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC79825DBC615001072E8 /* SiteDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,12 @@
 		48FAC75525DBB0AF001072E8 /* AgrecomAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgrecomAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FAC75925DBB0AF001072E8 /* AgrecomAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgrecomAppUITests.swift; sourceTree = "<group>"; };
 		48FAC75B25DBB0AF001072E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48FAC76C25DBB184001072E8 /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		48FAC77A25DBB1C2001072E8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		48FAC78025DBB20C001072E8 /* SiteList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SiteList.json; sourceTree = "<group>"; };
+		48FAC78E25DBB2A1001072E8 /* SiteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteList.swift; sourceTree = "<group>"; };
+		48FAC79325DBB91A001072E8 /* SiteListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteListPage.swift; sourceTree = "<group>"; };
+		48FAC79825DBC615001072E8 /* SiteDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +107,9 @@
 		48FAC73B25DBB0AE001072E8 /* AgrecomApp */ = {
 			isa = PBXGroup;
 			children = (
-				48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */,
-				48FAC73E25DBB0AE001072E8 /* ContentView.swift */,
+				48FAC76A25DBB13A001072E8 /* Views */,
+				48FAC76B25DBB177001072E8 /* Model */,
+				48FAC77F25DBB1E4001072E8 /* Resources */,
 				48FAC74025DBB0AF001072E8 /* Assets.xcassets */,
 				48FAC74525DBB0AF001072E8 /* Info.plist */,
 				48FAC74225DBB0AF001072E8 /* Preview Content */,
@@ -128,6 +141,35 @@
 				48FAC75B25DBB0AF001072E8 /* Info.plist */,
 			);
 			path = AgrecomAppUITests;
+			sourceTree = "<group>";
+		};
+		48FAC76A25DBB13A001072E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */,
+				48FAC73E25DBB0AE001072E8 /* ContentView.swift */,
+				48FAC78E25DBB2A1001072E8 /* SiteList.swift */,
+				48FAC79325DBB91A001072E8 /* SiteListPage.swift */,
+				48FAC79825DBC615001072E8 /* SiteDetails.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48FAC76B25DBB177001072E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48FAC76C25DBB184001072E8 /* Site.swift */,
+				48FAC77A25DBB1C2001072E8 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48FAC77F25DBB1E4001072E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48FAC78025DBB20C001072E8 /* SiteList.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48FAC74425DBB0AF001072E8 /* Preview Assets.xcassets in Resources */,
+				48FAC78125DBB20C001072E8 /* SiteList.json in Resources */,
 				48FAC74125DBB0AF001072E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48FAC78F25DBB2A1001072E8 /* SiteList.swift in Sources */,
 				48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */,
+				48FAC77B25DBB1C2001072E8 /* ModelData.swift in Sources */,
+				48FAC79425DBB91A001072E8 /* SiteListPage.swift in Sources */,
+				48FAC76D25DBB184001072E8 /* Site.swift in Sources */,
 				48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */,
+				48FAC79925DBC615001072E8 /* SiteDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
