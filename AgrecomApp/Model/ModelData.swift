@@ -7,8 +7,12 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-var Sites: [Site] = load("SiteList.json")
+final class ModelData: ObservableObject{
+    @Published var Sites: [Site] = load("SiteList.json")
+}
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

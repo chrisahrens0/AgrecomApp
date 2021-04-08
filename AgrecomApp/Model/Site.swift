@@ -15,6 +15,7 @@ struct Site: Hashable, Codable, Identifiable {
     var category: String
     var addressLine1: String
     var addressLine2: String
+    var isFavorite: Bool
     
     
 }
