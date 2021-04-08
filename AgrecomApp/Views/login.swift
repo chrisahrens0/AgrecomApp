@@ -7,6 +7,7 @@ struct login: View {
 
     var body: some View {
         VStack {
+            agrecomImage()
             TextField("Username", text: $username)
                 .padding(20)
                 .background(Color(red:240.0/255.0, green: 240.0/255, blue: 244.0/255.0))
@@ -15,6 +16,7 @@ struct login: View {
                 .padding(20)
                 .background(Color(red:240.0/255.0, green: 240.0/255, blue: 244.0/255.0))
                 .cornerRadius(20.0)
+            Text("SIGN IN")
         }
     }
 }
@@ -25,3 +27,12 @@ struct login_Preview:
             login()
         }
     }
+
+struct agrecomImage: View {
+    var body: some View {
+        Image("AgrecomLogo")
+            .resizable()
+            .clipped()
+            .cornerRadius(150)
+    }
+}
