@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */; };
+		48C656E1262019B000C9B0DF /* FormPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E0262019B000C9B0DF /* FormPage.swift */; };
+		48C656E62620258000C9B0DF /* ReportForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E52620258000C9B0DF /* ReportForm.swift */; };
 		48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */; };
 		48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC73E25DBB0AE001072E8 /* ContentView.swift */; };
 		48FAC74125DBB0AF001072E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FAC74025DBB0AF001072E8 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		48C656E0262019B000C9B0DF /* FormPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPage.swift; sourceTree = "<group>"; };
+		48C656E52620258000C9B0DF /* ReportForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportForm.swift; sourceTree = "<group>"; };
 		48FAC73925DBB0AE001072E8 /* AgrecomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgrecomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgrecomAppApp.swift; sourceTree = "<group>"; };
 		48FAC73E25DBB0AE001072E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		48C656DF2620199200C9B0DF /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				48C656E0262019B000C9B0DF /* FormPage.swift */,
+				48C656E52620258000C9B0DF /* ReportForm.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
 		48FAC73025DBB0AE001072E8 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 		48FAC73B25DBB0AE001072E8 /* AgrecomApp */ = {
 			isa = PBXGroup;
 			children = (
+				48C656DF2620199200C9B0DF /* Forms */,
 				48C656D5261EED4100C9B0DF /* Helpers */,
 				48C656D4261EED1300C9B0DF /* Sites */,
 				48FAC76A25DBB13A001072E8 /* Views */,
@@ -328,6 +342,8 @@
 				48FAC79425DBB91A001072E8 /* SiteListPage.swift in Sources */,
 				48FAC76D25DBB184001072E8 /* Site.swift in Sources */,
 				48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */,
+				48C656E62620258000C9B0DF /* ReportForm.swift in Sources */,
+				48C656E1262019B000C9B0DF /* FormPage.swift in Sources */,
 				48FAC79925DBC615001072E8 /* SiteDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
