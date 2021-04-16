@@ -55,7 +55,7 @@ struct SiteDetails: View {
                 }.buttonStyle(BigBlueButton())
             }
         }
-        .navigationBarTitle(site.siteName+": Site Information")
+        .navigationTitle(site.siteName+": Site Information")
     }
 }
 

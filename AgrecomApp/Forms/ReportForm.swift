@@ -12,7 +12,22 @@ struct ReportForm: View {
     var site: Site
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            Form{
+                Section(header: Text("Report Info")){
+                    Text("Report ID: 0001")
+                    // use site json template for report json
+                    Text("Site: " + site.siteName)
+                    
+                }
+                Section(header: Text("Stations")){
+                    NavigationLink(destination: StationForm()){
+                        Text("Stations")
+                    }
+                }
+            }
+            .navigationTitle(Text("Edit Report"))
+        }
     }
 }
 

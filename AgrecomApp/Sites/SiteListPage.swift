@@ -30,6 +30,7 @@ struct SiteListPage: View {
                 }
                 .navigationTitle("Sites")
             }
+            .navigationBarTitle("Sites")
         }
     }
 }

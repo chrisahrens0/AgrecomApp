@@ -10,6 +10,8 @@
 		48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */; };
 		48C656E1262019B000C9B0DF /* FormPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E0262019B000C9B0DF /* FormPage.swift */; };
 		48C656E62620258000C9B0DF /* ReportForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E52620258000C9B0DF /* ReportForm.swift */; };
+		48C656EB2629A86F00C9B0DF /* StationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656EA2629A86E00C9B0DF /* StationForm.swift */; };
+		48C656F0262A1B0C00C9B0DF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656EF262A1B0C00C9B0DF /* MapView.swift */; };
 		48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */; };
 		48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC73E25DBB0AE001072E8 /* ContentView.swift */; };
 		48FAC74125DBB0AF001072E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FAC74025DBB0AF001072E8 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		48C656E0262019B000C9B0DF /* FormPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPage.swift; sourceTree = "<group>"; };
 		48C656E52620258000C9B0DF /* ReportForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportForm.swift; sourceTree = "<group>"; };
+		48C656EA2629A86E00C9B0DF /* StationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationForm.swift; sourceTree = "<group>"; };
+		48C656EF262A1B0C00C9B0DF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		48FAC73925DBB0AE001072E8 /* AgrecomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgrecomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgrecomAppApp.swift; sourceTree = "<group>"; };
 		48FAC73E25DBB0AE001072E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */,
+				48C656EF262A1B0C00C9B0DF /* MapView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				48C656E0262019B000C9B0DF /* FormPage.swift */,
 				48C656E52620258000C9B0DF /* ReportForm.swift */,
+				48C656EA2629A86E00C9B0DF /* StationForm.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -336,10 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				48FAC78F25DBB2A1001072E8 /* SiteList.swift in Sources */,
+				48C656F0262A1B0C00C9B0DF /* MapView.swift in Sources */,
 				48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */,
 				48FAC77B25DBB1C2001072E8 /* ModelData.swift in Sources */,
 				48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */,
 				48FAC79425DBB91A001072E8 /* SiteListPage.swift in Sources */,
+				48C656EB2629A86F00C9B0DF /* StationForm.swift in Sources */,
 				48FAC76D25DBB184001072E8 /* Site.swift in Sources */,
 				48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */,
 				48C656E62620258000C9B0DF /* ReportForm.swift in Sources */,

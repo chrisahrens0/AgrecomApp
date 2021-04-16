@@ -19,8 +19,9 @@ struct FormPage: View {
     var body: some View {
         NavigationView{
             Form {
-                Section(header: Text("Profile")){
+                Section(header: Text("User Profile")){
                     TextField("Username", text: $username)
+                        .disableAutocorrection(true)
                     SecureField("Password", text: $password)
                 }
                 Section(header: Text("Timestamp")){
@@ -48,7 +49,7 @@ struct FormPage: View {
                     }
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
+            //.navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal){
                     VStack {
