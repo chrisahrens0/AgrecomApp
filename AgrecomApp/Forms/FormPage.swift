@@ -10,6 +10,7 @@ import SwiftUI
 struct FormPage: View {
     @EnvironmentObject var modelData:ModelData
     var site: Site
+    //var siteID: Int
     
     @State var username: String = ""
     @State var password: String = ""
@@ -17,7 +18,7 @@ struct FormPage: View {
     @State var isLinkActive = false
     
     var body: some View {
-        NavigationView{
+        //NavigationView{
             Form {
                 Section(header: Text("User Profile")){
                     TextField("Username", text: $username)
@@ -32,16 +33,16 @@ struct FormPage: View {
                     let year = calendar.component(.year, from: date)
                     let month = calendar.component(.month, from:date)
                     let day = calendar.component(.day, from: date)
-                    VStack {
-                        Text(verbatim: "Date: \(year)/\(month)/\(day)")
-                        Text("Time: \(hour):\(minute)")
-                    }
+                    //VStack {
+                        Text(verbatim: "\(year)/\(month)/\(day)")
+                        Text("\(String(format: "%02d", hour)):\(String(format: "%02d", minute))")
+                    //}
                 }
                 Section(header: Text("Site Information")){
                     Text(site.siteName)
                     Text("Report ID: 1")
                 }
-                NavigationLink(destination: ReportForm(site: site), isActive: $isLinkActive){
+                NavigationLink(destination: StationForm(site: ModelData().Sites[0]), isActive: $isLinkActive){
                     Button(action: {
                         self.isLinkActive = true
                     }) {
@@ -59,7 +60,7 @@ struct FormPage: View {
                 }
             }
             
-        }
+        //}
     }
 }
 

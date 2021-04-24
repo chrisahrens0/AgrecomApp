@@ -12,7 +12,7 @@ struct ReportForm: View {
     var site: Site
     
     var body: some View {
-        NavigationView{
+        //NavigationView{
             Form{
                 Section(header: Text("Report Info")){
                     Text("Report ID: 0001")
@@ -20,14 +20,14 @@ struct ReportForm: View {
                     Text("Site: " + site.siteName)
                     
                 }
-                Section(header: Text("Stations")){
-                    NavigationLink(destination: StationForm()){
-                        Text("Stations")
-                    }
-                }
+//                Section(header: Text("Stations")){
+//                    NavigationLink( destination: StationForm(site: ModelData().Sites[0]){
+//                        Text("Stations")
+//                    }
+//                }
             }
             .navigationTitle(Text("Edit Report"))
-        }
+        //}
     }
 }
 

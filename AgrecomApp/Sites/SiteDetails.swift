@@ -28,7 +28,8 @@ struct SiteDetails: View {
     @State var isLinkActive = false
     
     var body: some View {
-        NavigationView{
+        //NavigationView{
+        ScrollView{
             VStack(alignment: .leading) {
 //                Image("AgrecomLogo")
 //                    .resizable()
@@ -50,18 +51,18 @@ struct SiteDetails: View {
                     .font(.body)
                 
                 Spacer()
-                NavigationLink(destination: FormPageTest()){
+                NavigationLink(destination: FormPage(site: ModelData().Sites[0])){
                     Text("Start Report")
                 }.buttonStyle(BigBlueButton())
             }
         }
-        .navigationTitle(site.siteName+": Site Information")
+        .navigationTitle("Site Details")
     }
 }
 
 struct FormPageTest: View {
     var body: some View {
-        Text("You got here")
+        Text("Error displaying Form Page")
     }
 }
 

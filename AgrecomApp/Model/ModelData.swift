@@ -11,6 +11,7 @@ import Combine
 
 final class ModelData: ObservableObject{
     @Published var Sites: [Site] = load("SiteList.json")
+    
 }
 
 

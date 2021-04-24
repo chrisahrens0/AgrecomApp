@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct StationForm: View {
-    @State private var correctiveReccomendation: String = "Corrective Recommendation:\n"
+    @State private var correctiveRecommendation: String = ""
     @State private var selectedVegStatus = VegStatus.none
     @State private var BaitNotes: String = ""
     @State private var ReportNotes: String = ""
+    
+    var site: Site
     
     enum VegStatus: String, CaseIterable, Identifiable {
         var id: String { self.rawValue }
@@ -25,7 +27,7 @@ struct StationForm: View {
     
     
     var body: some View {
-        NavigationView{
+        //NavigationView{
             Form{
                 Section(header: Text("Facility Conditions")){
                     Picker(selection: $selectedVegStatus, label: Text("Vegetation Status"), content: {
@@ -34,20 +36,16 @@ struct StationForm: View {
                         Text("Medium").tag(VegStatus.medium)
                         Text("High").tag(VegStatus.high)
                     })
-                    TextEditor(text: $correctiveReccomendation)
 
                 }
-                
+                Section(header: Text("Corrective Recommendation")){
+                    TextEditor(text: $correctiveRecommendation)
+                }
+                    
                 Section(header: Text("Pest Control Findings")){
                     // FIX to enable multiple selection
                     NavigationLink(destination: StationActivity()) {
                         Text("Select Stations with Activity")
-                    }
-                    Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Type of Activity")) {
-                        Text("Rodent").tag(1)
-                        Text("Insect").tag(2)
-                        Text("Reptile").tag(3)
-                        Text("Other").tag(4)
                     }
                     NavigationLink(destination: StationActivity()){
                         Text("Select Inaccessible Stations")
@@ -83,7 +81,7 @@ struct StationForm: View {
                 }
             }
             .navigationTitle(Text("Edit Report"))
-        }
+        //}
     }
 }
 
@@ -95,12 +93,23 @@ struct StationActivity: View {
         Text("Placeholder for Map and Station Selection List")
             .padding()
         Text("selects from list of sites, display site picture")
+        
+        Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Type of Activity")) {
+            Text("Rodent").tag(1)
+            Text("Insect").tag(2)
+            Text("Reptile").tag(3)
+            Text("Other").tag(4)
+        }
     }
 }
 
 struct StationForm_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        StationForm()
+        StationForm(site: ModelData().Sites[0])
+            .environmentObject(modelData)
+        
     }
 }
 
