@@ -13,6 +13,8 @@
 		48C656EB2629A86F00C9B0DF /* StationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656EA2629A86E00C9B0DF /* StationForm.swift */; };
 		48C656F0262A1B0C00C9B0DF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656EF262A1B0C00C9B0DF /* MapView.swift */; };
 		48C656F526339D1100C9B0DF /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656F426339D1000C9B0DF /* Station.swift */; };
+		48C657012633C22200C9B0DF /* MultiRowSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C657002633C22200C9B0DF /* MultiRowSelect.swift */; };
+		48C657072633E2A000C9B0DF /* SubmitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C657062633E2A000C9B0DF /* SubmitView.swift */; };
 		48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */; };
 		48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FAC73E25DBB0AE001072E8 /* ContentView.swift */; };
 		48FAC74125DBB0AF001072E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48FAC74025DBB0AF001072E8 /* Assets.xcassets */; };
@@ -51,6 +53,9 @@
 		48C656EA2629A86E00C9B0DF /* StationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationForm.swift; sourceTree = "<group>"; };
 		48C656EF262A1B0C00C9B0DF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		48C656F426339D1000C9B0DF /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		48C656FC2633AAFA00C9B0DF /* Stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stations.json; sourceTree = "<group>"; };
+		48C657002633C22200C9B0DF /* MultiRowSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiRowSelect.swift; sourceTree = "<group>"; };
+		48C657062633E2A000C9B0DF /* SubmitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitView.swift; sourceTree = "<group>"; };
 		48FAC73925DBB0AE001072E8 /* AgrecomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgrecomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FAC73C25DBB0AE001072E8 /* AgrecomAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgrecomAppApp.swift; sourceTree = "<group>"; };
 		48FAC73E25DBB0AE001072E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 			children = (
 				48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */,
 				48C656EF262A1B0C00C9B0DF /* MapView.swift */,
+				48C657002633C22200C9B0DF /* MultiRowSelect.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				48C656EA2629A86E00C9B0DF /* StationForm.swift */,
 			);
 			path = Forms;
+			sourceTree = "<group>";
+		};
+		48C657052633E28C00C9B0DF /* Submission */ = {
+			isa = PBXGroup;
+			children = (
+				48C657062633E2A000C9B0DF /* SubmitView.swift */,
+			);
+			path = Submission;
 			sourceTree = "<group>";
 		};
 		48FAC73025DBB0AE001072E8 = {
@@ -148,6 +162,7 @@
 		48FAC73B25DBB0AE001072E8 /* AgrecomApp */ = {
 			isa = PBXGroup;
 			children = (
+				48C657052633E28C00C9B0DF /* Submission */,
 				48C656DF2620199200C9B0DF /* Forms */,
 				48C656D5261EED4100C9B0DF /* Helpers */,
 				48C656D4261EED1300C9B0DF /* Sites */,
@@ -210,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				48FAC78025DBB20C001072E8 /* SiteList.json */,
+				48C656FC2633AAFA00C9B0DF /* Stations.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -348,6 +364,7 @@
 				48C656F0262A1B0C00C9B0DF /* MapView.swift in Sources */,
 				48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */,
 				48FAC77B25DBB1C2001072E8 /* ModelData.swift in Sources */,
+				48C657012633C22200C9B0DF /* MultiRowSelect.swift in Sources */,
 				48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */,
 				48C656F526339D1100C9B0DF /* Station.swift in Sources */,
 				48FAC79425DBB91A001072E8 /* SiteListPage.swift in Sources */,
@@ -355,6 +372,7 @@
 				48FAC76D25DBB184001072E8 /* Site.swift in Sources */,
 				48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */,
 				48C656E62620258000C9B0DF /* ReportForm.swift in Sources */,
+				48C657072633E2A000C9B0DF /* SubmitView.swift in Sources */,
 				48C656E1262019B000C9B0DF /* FormPage.swift in Sources */,
 				48FAC79925DBC615001072E8 /* SiteDetails.swift in Sources */,
 			);

@@ -1,0 +1,69 @@
+[
+    {
+        "id": 10000001,
+        "siteID": 10001
+        "stationID": 0001
+    },
+    {
+        "id": 10000002,
+        "siteID": 10001
+        "stationID": 0002
+    },
+    {
+        "id": 10000003,
+        "siteID": 10001
+        "stationID": 0003
+    },
+    {
+        "id": 10000004,
+        "siteID": 10001
+        "stationID": 0004
+    },
+    {
+        "id": 10000005,
+        "siteID": 20001
+        "stationID": 0001
+    },
+    {
+        "id": 10000006,
+        "siteID": 20001
+        "stationID": 0002
+    },
+    {
+        "id": 10000007,
+        "siteID": 20001
+        "stationID": 0001
+    },
+    {
+        "id": 10000008,
+        "siteID": 20002
+        "stationID": 0001
+    },
+    {
+        "id": 10000009,
+        "siteID": 20003
+        "stationID": 0001
+    },
+    {
+        "id": 10000010,
+        "siteID": 20004
+        "stationID": 0001
+    },
+    {
+        "id": 10000011,
+        "siteID": 10001
+        "stationID": 0004
+    },
+    {
+        "id": 10000012,
+        "siteID": 10001
+        "stationID": 0005
+    }
+
+
+
+
+
+    
+    
+]

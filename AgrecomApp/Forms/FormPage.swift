@@ -15,6 +15,7 @@ struct FormPage: View {
     @State var username: String = ""
     @State var password: String = ""
     
+    
     @State var isLinkActive = false
     
     var body: some View {
@@ -40,7 +41,7 @@ struct FormPage: View {
                 }
                 Section(header: Text("Site Information")){
                     Text(site.siteName)
-                    Text("Report ID: 1")
+                    Text("Report ID: " + "000001")
                 }
                 NavigationLink(destination: StationForm(site: ModelData().Sites[0]), isActive: $isLinkActive){
                     Button(action: {

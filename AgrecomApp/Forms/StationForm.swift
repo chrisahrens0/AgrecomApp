@@ -9,7 +9,6 @@ import SwiftUI
 
 struct StationForm: View {
     @State private var correctiveRecommendation: String = ""
-    @State private var selectedVegStatus = VegStatus.none
     @State private var BaitNotes: String = ""
     @State private var ReportNotes: String = ""
     
@@ -23,12 +22,32 @@ struct StationForm: View {
         case medium
         case high
     }
+    @State private var selectedVegStatus = VegStatus.none
+    
+    enum BaitSelected: String, CaseIterable, Identifiable {
+        var id: String { self.rawValue }
+        
+        case none
+        case jaguar
+        case liquatox
+        case hawk
+        case tempo
+        case contrac
+        case terad
+        case final
+        case other
+    }
+    @State private var selectedBait = BaitSelected.none
     
     
     
     var body: some View {
         //NavigationView{
             Form{
+                Section(header: Text("Report Information")){
+                    Text("Report ID: " + "000001")
+                    Text("User: " + "test_user")
+                }
                 Section(header: Text("Facility Conditions")){
                     Picker(selection: $selectedVegStatus, label: Text("Vegetation Status"), content: {
                         Text("None").tag(VegStatus.none)
@@ -62,23 +81,30 @@ struct StationForm: View {
                 }
                 
                 Section(){
-                    Picker(selection: .constant(1), label: Text("Bait Used")){
-                        Text("Jaguar").tag(1)
-                        Text("Liqua Tox").tag(2)
-                        Text("Hawk").tag(3)
-                        Text("Tempo SC Ultra").tag(4)
-                        Text("Contrac").tag(5)
-                        Text("Terad").tag(6)
-                        Text("Final").tag(7)
-                        Text("Other").tag(8)
+                    Picker(selection: $selectedBait, label: Text("Bait Used")){
+                        Text("None").tag(BaitSelected.none)
+                        Text("Jaguar").tag(BaitSelected.jaguar)
+                        Text("Liqua Tox").tag(BaitSelected.liquatox)
+                        Text("Hawk").tag(BaitSelected.hawk)
+                        Text("Tempo SC Ultra").tag(BaitSelected.tempo)
+                        Text("Contrac").tag(BaitSelected.contrac)
+                        Text("Terad").tag(BaitSelected.terad)
+                        Text("Final").tag(BaitSelected.final)
+                        Text("Other").tag(BaitSelected.other)
                     }
                     TextField("Bait Notes", text: $BaitNotes)
                     
                 }
                 
-                Section(header: Text("Addtional Notes Customers Plan of Action")){
+                Section(header: Text("Addtional Notes/Customers Plan of Action")){
                     TextEditor(text: $ReportNotes)
                 }
+                
+                NavigationLink(destination: SubmitView()){
+                    Text("Review and Submit")
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                }.buttonStyle(BigBlueButton())
+                
             }
             .navigationTitle(Text("Edit Report"))
         //}
@@ -87,18 +113,32 @@ struct StationForm: View {
 
 struct StationActivity: View {
     var body: some View{
-        Image("AgrecomLogo")
-        MapView()
-            .frame(height: 400)
-        Text("Placeholder for Map and Station Selection List")
-            .padding()
-        Text("selects from list of sites, display site picture")
-        
-        Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Type of Activity")) {
-            Text("Rodent").tag(1)
-            Text("Insect").tag(2)
-            Text("Reptile").tag(3)
-            Text("Other").tag(4)
+        ScrollView{
+            Image("AgrecomLogo")
+            MapView()
+                .frame(height: 400)
+            Text("Placeholder for Map and Station Selection List")
+                .padding()
+            Text("selects from list of sites, display site picture")
+            
+            Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Type of Activity")) {
+                Text("Rodent").tag(1)
+                Text("Insect").tag(2)
+                Text("Reptile").tag(3)
+                Text("Other").tag(4)
+            }
+        }
+    }
+}
+
+struct StationSelect: View {
+    var body: some View{
+        ScrollView {
+            MapView()
+                .frame(height:350)
+            Form{
+                
+            }
         }
     }
 }

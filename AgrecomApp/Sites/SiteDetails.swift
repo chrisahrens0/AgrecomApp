@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct BigBlueButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding()
-            .background(Color(red: 0, green: 0.5, blue: 0.9))
-            .foregroundColor(.white)
-            .clipShape(Capsule())
-    }
-}
+//struct BigBlueButton: ButtonStyle {
+//    func makeBody(configuration: Configuration) -> some View {
+//        configuration.label
+//            .padding()
+//            .background(Color(red: 0, green: 0.5, blue: 0.9))
+//            .foregroundColor(.white)
+//            .clipShape(Capsule())
+//    }
+//}
 
 struct SiteDetails: View {
     @EnvironmentObject var modelData:ModelData

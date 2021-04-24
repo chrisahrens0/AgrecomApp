@@ -20,6 +20,16 @@ struct FavoriteButton: View {
     }
 }
 
+struct BigBlueButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(Color(red: 0, green: 0.5, blue: 0.9))
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+    }
+}
+
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
         FavoriteButton(isSet: .constant(true))
