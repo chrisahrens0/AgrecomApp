@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct FormPage: View {
     @EnvironmentObject var modelData:ModelData
     var site: Site
@@ -15,8 +16,8 @@ struct FormPage: View {
     @State var username: String = ""
     @State var password: String = ""
     
-    
     @State var isLinkActive = false
+    @State private var showAlert = false
     
     var body: some View {
         //NavigationView{
@@ -43,9 +44,23 @@ struct FormPage: View {
                     Text(site.siteName)
                     Text("Report ID: " + "000001")
                 }
+                var report = Report()
                 NavigationLink(destination: StationForm(site: ModelData().Sites[0]), isActive: $isLinkActive){
                     Button(action: {
-                        self.isLinkActive = true
+                        if(username != "" && password != ""){
+                            report.user = username
+                            report.pass = password
+                            self.isLinkActive = true
+                        } else {
+                            showAlert = true
+                            self.alert(isPresented: $showAlert){
+                                Alert(
+                                    title: Text("Error"),
+                                    message: Text("Enter username and password"),
+                                    dismissButton: .default(Text("Dismiss"))
+                                )
+                            }
+                        }
                     }) {
                         Text("Start Report")
                     }

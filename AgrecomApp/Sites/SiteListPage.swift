@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SiteListPage: View {
     @EnvironmentObject var modelData: ModelData
+    @Environment(\.presentationMode) var presentationMode
     @State private var showFavoritesOnly = false
+    //@State public var dismissingReport = true
     
     var filteredSites: [Site] {
         modelData.Sites.filter { Site in

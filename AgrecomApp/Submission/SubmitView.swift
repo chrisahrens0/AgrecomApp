@@ -21,7 +21,7 @@ struct SubmitView: View {
             Button(
                 "Return to Site List",
                 action: {
-                    self.presentationMode.wrappedValue.dismiss()
+                    //self.presentationMode.wrappedValue.dismiss()
                 }
             )
         }

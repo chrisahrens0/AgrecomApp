@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48341CF62634EA8200D39CE8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48341CF52634EA8200D39CE8 /* Models.swift */; };
 		48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */; };
 		48C656E1262019B000C9B0DF /* FormPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E0262019B000C9B0DF /* FormPage.swift */; };
 		48C656E62620258000C9B0DF /* ReportForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E52620258000C9B0DF /* ReportForm.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48341CF52634EA8200D39CE8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		48C656E0262019B000C9B0DF /* FormPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPage.swift; sourceTree = "<group>"; };
 		48C656E52620258000C9B0DF /* ReportForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportForm.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				48FAC76C25DBB184001072E8 /* Site.swift */,
 				48FAC77A25DBB1C2001072E8 /* ModelData.swift */,
 				48C656F426339D1000C9B0DF /* Station.swift */,
+				48341CF52634EA8200D39CE8 /* Models.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				48C656EB2629A86F00C9B0DF /* StationForm.swift in Sources */,
 				48FAC76D25DBB184001072E8 /* Site.swift in Sources */,
 				48FAC73D25DBB0AE001072E8 /* AgrecomAppApp.swift in Sources */,
+				48341CF62634EA8200D39CE8 /* Models.swift in Sources */,
 				48C656E62620258000C9B0DF /* ReportForm.swift in Sources */,
 				48C657072633E2A000C9B0DF /* SubmitView.swift in Sources */,
 				48C656E1262019B000C9B0DF /* FormPage.swift in Sources */,
