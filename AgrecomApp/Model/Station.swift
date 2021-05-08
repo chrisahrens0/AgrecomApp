@@ -8,8 +8,9 @@
 import Foundation
 
 struct Station: Hashable, Codable, Identifiable {
-    var id: UUID
-    var siteId: Int
-    var stationID: Int
+    var id: UUID()
+    var siteId: Int?
+    var stationID: Int?
+    var qrCode: String
     
 }

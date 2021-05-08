@@ -58,7 +58,17 @@ struct StationForm: View {
                     NavigationLink(destination: StationActivity()){
                         Text("Add New Staton QR Codes")
                     }
-                    
+                    NavigationLink(destination: CodeScannerView(codeTypes: [.qr]) { result in
+                        switch result {
+                            case .success(let code):
+                                stations.append(Station(qrCode: code)) 
+                                print("Found code: \(code)")
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                    }){
+                        Text("Scan New Staton QR Codes")
+                    }
                 }
                 
                 Section(){
