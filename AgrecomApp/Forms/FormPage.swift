@@ -13,6 +13,7 @@ struct FormPage: View {
     var site: Site
     //var siteID: Int
     
+    @State var report: Report = Report()
     @State var username: String = ""
     @State var password: String = ""
     
@@ -44,8 +45,7 @@ struct FormPage: View {
                     Text(site.siteName)
                     Text("Report ID: " + "000001")
                 }
-                var report = Report()
-                NavigationLink(destination: StationForm(site: ModelData().Sites[0]), isActive: $isLinkActive){
+                NavigationLink(destination: StationForm(/*report: Binding<Report>,*/ site: ModelData().Sites[0]), isActive: $isLinkActive){
                     Button(action: {
                         if(username != "" && password != ""){
                             report.user = username

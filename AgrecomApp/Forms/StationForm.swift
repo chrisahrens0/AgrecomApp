@@ -11,6 +11,7 @@ struct StationForm: View {
     @State private var correctiveRecommendation: String = ""
     @State private var BaitNotes: String = ""
     @State private var ReportNotes: String = ""
+    //@Binding var report: Report
     
     var site: Site
     
@@ -46,7 +47,7 @@ struct StationForm: View {
             Form{
                 Section(header: Text("Report Information")){
                     Text("Report ID: " + "000001")
-                    Text("User: " + "test_user")
+                    Text("User: " + "Test_user")
                 }
                 Section(header: Text("Facility Conditions")){
                     Picker(selection: $selectedVegStatus, label: Text("Vegetation Status"), content: {
@@ -75,7 +76,7 @@ struct StationForm: View {
                     }
                     
                     NavigationLink(destination: StationActivity()){
-                        Text("Add New Staton QR Codes")
+                        Text("Add New Station QR Codes")
                     }
                     
                 }
@@ -147,7 +148,7 @@ struct StationForm_Previews: PreviewProvider {
     static let modelData = ModelData()
     
     static var previews: some View {
-        StationForm(site: ModelData().Sites[0])
+        StationForm(/*report: Report(),*/ site: ModelData().Sites[0])
             .environmentObject(modelData)
         
     }

@@ -249,6 +249,8 @@
 			dependencies = (
 			);
 			name = AgrecomApp;
+			packageProductDependencies = (
+			);
 			productName = AgrecomApp;
 			productReference = 48FAC73925DBB0AE001072E8 /* AgrecomApp.app */;
 			productType = "com.apple.product-type.application";
@@ -320,6 +322,8 @@
 				Base,
 			);
 			mainGroup = 48FAC73025DBB0AE001072E8;
+			packageReferences = (
+			);
 			productRefGroup = 48FAC73A25DBB0AE001072E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -540,7 +544,7 @@
 				DEVELOPMENT_TEAM = P72YHN83NK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AgrecomApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,7 +566,7 @@
 				DEVELOPMENT_TEAM = P72YHN83NK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AgrecomApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

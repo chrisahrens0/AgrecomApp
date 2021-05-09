@@ -19,6 +19,7 @@ struct Report {
     //      *Client may have to help you with this, we will have to delete the passwordless users and have client open up all addresses.
     
     var reportID = UUID()
+    var siteID: Int = -1
     
     // Facility conditions
     var vegStat: String = ""
@@ -34,19 +35,19 @@ struct Report {
     
     var additionalNotes: String = ""
     
-    //Initializing with dummy values
-    init() {
-        user = ""
-        pass = ""
-        //reportID should initialize with UUID
-        //reportID = UUID()
-        vegStat = ""
-        correctiveRecc = ""
-        baits = [Int]()
-        stationsWithActivity = [Int]()
-        stationsInaccessible = [Int]()
-        stationsDamaged = [Int]()
-        stationCodesAdded = [(Int, UUID)]()
-        additionalNotes = ""
-    }
+//    //Initializing with dummy values
+//    init() {
+//        user = ""
+//        pass = ""
+//        //reportID should initialize with UUID
+//        //reportID = UUID()
+//        vegStat = ""
+//        correctiveRecc = ""
+//        baits = [Int]()
+//        stationsWithActivity = [Int]()
+//        stationsInaccessible = [Int]()
+//        stationsDamaged = [Int]()
+//        stationCodesAdded = [(Int, UUID)]()
+//        additionalNotes = ""
+//    }
 }
