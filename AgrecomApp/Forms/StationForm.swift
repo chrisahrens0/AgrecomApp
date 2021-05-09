@@ -40,7 +40,16 @@ struct StationForm: View {
     }
     @State private var selectedBait = BaitSelected.none
     
-    
+    public enum StationActivity: String, CaseIterable, Identifiable {
+        var id: String { self.rawValue }
+        
+        case none
+        case rodent
+        case reptile
+        case insect
+        case other
+    }
+    @State public var selectedActivity = StationActivity.none
     
     var body: some View {
         //NavigationView{
@@ -64,19 +73,34 @@ struct StationForm: View {
                     
                 Section(header: Text("Pest Control Findings")){
                     // FIX to enable multiple selection
-                    NavigationLink(destination: StationActivity()) {
+                    NavigationLink(destination: StationActivityPage()) {
                         Text("Select Stations with Activity")
                     }
-                    NavigationLink(destination: StationActivity()){
+                    NavigationLink(destination: StationsInaccessible()){
                         Text("Select Inaccessible Stations")
                     }
                     
-                    NavigationLink(destination: StationActivity()) {
+                    NavigationLink(destination: StationsDamaged()) {
                         Text("Select Damaged Stations")
                     }
                     
-                    NavigationLink(destination: StationActivity()){
-                        Text("Add New Station QR Codes")
+//                    NavigationLink(destination: StationActivityPage()){
+//                        Text("Add New Station QR Codes")
+//                    }
+//                    //Replaced by CodeScannerView Link
+                    
+                    NavigationLink(destination: CodeScannerView(codeTypes: [.qr]) {
+                        result in
+                        switch result {
+                        case .success(let code):
+                            //stations.append(Station(qrCode: code))
+                            print("found code: \(code)")
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                        }
+                        
+                    }){
+                        Text("Add NEw Station QR Codes")
                     }
                     
                 }
@@ -112,25 +136,116 @@ struct StationForm: View {
     }
 }
 
-struct StationActivity: View {
+struct StationActivityPage: View {
+    
+    @State private var stationCode: String = ""
+    
+    public enum StationActivity: String, CaseIterable, Identifiable {
+        var id: String { self.rawValue }
+
+        case none
+        case rodent
+        case reptile
+        case insect
+        case other
+    }
+    @State public var selectedActivity = StationActivity.none
+    
     var body: some View{
-        ScrollView{
+        Form{
             Image("AgrecomLogo")
             MapView()
-                .frame(height: 400)
-            Text("Placeholder for Map and Station Selection List")
-                .padding()
-            Text("selects from list of sites, display site picture")
+                .frame(height: 300)
+            Text("Placeholder Map: to be edited by Agrecom")
+                //.padding()
+            //Text("selects from list of sites, display site picture")
             
-            Picker(selection: /*@START_MENU_TOKEN@*/.constant(1)/*@END_MENU_TOKEN@*/, label: Text("Type of Activity")) {
-                Text("Rodent").tag(1)
-                Text("Insect").tag(2)
-                Text("Reptile").tag(3)
-                Text("Other").tag(4)
+            Section(header: Text("Station Select")){
+                NavigationLink(destination: CodeScannerView(codeTypes: [.qr]) {
+                    result in
+                    switch result {
+                    case .success(let code):
+                        //stations.append(Station(qrCode: code))
+                        print("found code: \(code)")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                    
+                }){
+                    Text("Scan Station Code with Activity")
+                }
+                
+                TextField("Enter Station Code Manually", text: $stationCode)
+            }
+            
+            Picker(selection: $selectedActivity, label: Text("Type of Activity")) {
+                Text("None").tag(StationActivity.none)
+                Text("Rodent").tag(StationActivity.rodent)
+                Text("Insect").tag(StationActivity.insect)
+                Text("Reptile").tag(StationActivity.reptile)
+                Text("Other").tag(StationActivity.other)
             }
         }
     }
 }
+
+struct StationsInaccessible: View {
+    
+    @State private var stationCode: String = ""
+    
+    var body: some View{
+        Form{
+            Image("AgrecomLogo")
+            MapView()
+                .frame(height: 300)
+            Text("Placeholder Map: to be edited by Agrecom")
+                //.padding()
+            //Text("selects from list of sites, display site picture")
+            
+            Section(header: Text("Station Select")){
+                
+                TextField("Enter Station Code Manually", text: $stationCode)
+            }
+        }
+    }
+}
+
+struct StationsDamaged: View {
+    
+    @State private var stationCode: String = ""
+    
+    
+    var body: some View{
+        Form{
+            Image("AgrecomLogo")
+            MapView()
+                .frame(height: 300)
+            Text("Placeholder Map: to be edited by Agrecom")
+                //.padding()
+            //Text("selects from list of sites, display site picture")
+            
+            Section(header: Text("Station Select")){
+                NavigationLink(destination: CodeScannerView(codeTypes: [.qr]) {
+                    result in
+                    switch result {
+                    case .success(let code):
+                        //stations.append(Station(qrCode: code))
+                        print("found code: \(code)")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                    
+                }){
+                    Text("Scan Station Code with Activity")
+                }
+                
+                TextField("Enter Station Code Manually", text: $stationCode)
+            }
+        }
+    }
+}
+
+
 
 struct StationSelect: View {
     var body: some View{
@@ -150,6 +265,7 @@ struct StationForm_Previews: PreviewProvider {
     static var previews: some View {
         StationForm(/*report: Report(),*/ site: ModelData().Sites[0])
             .environmentObject(modelData)
+        //StationsInaccessible()
         
     }
 }

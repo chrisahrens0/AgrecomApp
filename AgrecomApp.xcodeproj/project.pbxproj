@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		48341CF62634EA8200D39CE8 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48341CF52634EA8200D39CE8 /* Models.swift */; };
+		48341D24264771FB00D39CE8 /* QrScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48341D23264771FB00D39CE8 /* QrScanner.swift */; };
 		48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */; };
 		48C656E1262019B000C9B0DF /* FormPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E0262019B000C9B0DF /* FormPage.swift */; };
 		48C656E62620258000C9B0DF /* ReportForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C656E52620258000C9B0DF /* ReportForm.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		48341CF52634EA8200D39CE8 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		48341D23264771FB00D39CE8 /* QrScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScanner.swift; sourceTree = "<group>"; };
 		48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		48C656E0262019B000C9B0DF /* FormPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPage.swift; sourceTree = "<group>"; };
 		48C656E52620258000C9B0DF /* ReportForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportForm.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				48C656CE261EEC6B00C9B0DF /* FavoriteButton.swift */,
 				48C656EF262A1B0C00C9B0DF /* MapView.swift */,
 				48C657002633C22200C9B0DF /* MultiRowSelect.swift */,
+				48341D23264771FB00D39CE8 /* QrScanner.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				48C656F0262A1B0C00C9B0DF /* MapView.swift in Sources */,
 				48FAC73F25DBB0AE001072E8 /* ContentView.swift in Sources */,
 				48FAC77B25DBB1C2001072E8 /* ModelData.swift in Sources */,
+				48341D24264771FB00D39CE8 /* QrScanner.swift in Sources */,
 				48C657012633C22200C9B0DF /* MultiRowSelect.swift in Sources */,
 				48C656CF261EEC6B00C9B0DF /* FavoriteButton.swift in Sources */,
 				48C656F526339D1100C9B0DF /* Station.swift in Sources */,
