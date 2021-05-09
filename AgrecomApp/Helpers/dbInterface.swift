@@ -13,6 +13,21 @@ import PostgresNIO
     performs a basic querying test of the database
  */
  func connect() {
-     
+     //create a connection
+
+     let eventLoop: EventLoop;
+    let conn = try! PostgresConnection.connect(
+        to: .makeAddressResolvingHost("agrecom-sql-test.postgres.database.azure.com", port: 5432),
+        on: eventLoop
+    ).wait()
+    defer { try! conn.close().wait() }
+
+    //authenticate the connection with the database
+    try conn.authenticate(
+        username: "vapor_username",
+        database: "vapor_database",
+        password: "vapor_password"
+    ).wait()
+
  }
 */
