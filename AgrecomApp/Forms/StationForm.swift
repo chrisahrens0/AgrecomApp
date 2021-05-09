@@ -100,7 +100,7 @@ struct StationForm: View {
                         }
                         
                     }){
-                        Text("Add NEw Station QR Codes")
+                        Text("Add New Station QR Codes")
                     }
                     
                 }

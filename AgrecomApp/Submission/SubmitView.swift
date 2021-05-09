@@ -53,7 +53,7 @@ struct SubmitView: View {
                 Button(
                     "Return to Sites",
                     action: {
-                        //self.presentationMode.wrappedValue.dismiss()
+                        self.presentationMode.wrappedValue.dismiss()
                     }
                 )
             }

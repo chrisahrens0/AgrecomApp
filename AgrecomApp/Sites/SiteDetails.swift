@@ -49,11 +49,26 @@ struct SiteDetails: View {
                 Text("\n")
                 Text(site.description)
                     .font(.body)
+                    .padding()
                 
                 Spacer()
+                
+                //VStack(alignment: .center, spacing: 20, content: {
+                    //Text("Placeholder")
+                
+                NavigationLink(destination: ReportList()){
+                    Text("Review Previous Reports")
+                        .padding()
+                        .background(Color(red: 0.8, green: 0.8, blue: 0.8))
+                        .foregroundColor(.black)
+                        .clipShape(Capsule())
+                }
                 NavigationLink(destination: FormPage(site: ModelData().Sites[0])){
-                    Text("Start Report")
+                    HStack{
+                        Text("           Start Report           ")
+                    }
                 }.buttonStyle(BigBlueButton())
+                //})
             }
         }
         .navigationTitle("Site Details")
